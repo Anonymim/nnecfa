@@ -1,0 +1,181 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #004d00;
+    text-align: center;
+}
+
+
+/* Header */
+
+header {
+    background-color: #004d00;
+    color: white;
+    padding: 5px;
+    /* Reduced padding */
+    padding-top: 15px;
+    /* Adjusted top padding */
+    font-size: 18px;
+    /* Reduce font size */
+}
+
+
+/* Section Styling */
+
+section {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Downloads */
+
+.downloads ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.downloads ul li a {
+    text-decoration: none;
+    color: #2a6e32;
+    font-weight: bold;
+}
+
+.downloads ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Events */
+
+.event-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.event-card {
+    background-color: #004d00;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 40%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Announcements */
+
+#announcement-box p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+
+/* Gallery */
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
+}
+
+
+/* General styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+
+/* Header Styling */
+
+header {
+    background-color: #004d00;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* Archive Container */
+
+.archive-container {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+/* Document Section */
+
+.documents {
+    background: white;
+    color: #007700;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+
+/* Document Cards Grid */
+
+.doc-grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Individual Document Card */
+
+.doc-card {
+    background: #e6ffe6;
+    padding: 15px;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+
+/* Download Button */
+
+.download-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007700;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.download-btn:hover {
+    background-color: #005500;
+}
