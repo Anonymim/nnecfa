@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Nandi North Escarpment CFA</title>
+    <link rel="icon" type="image/png" href="img/CFA logo.png.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="services.css">
+
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <img src="img/CFA logo.png.png" alt="CFA Logo" class="logo">
+        <div class="header-content">
+            <h1>Nandi North Escarpment</h1>
+            <h2>Community Forest Association</h2>
+            <!-- Navigation -->
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="archives.html">Archives</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+        <img src="img/CFA logo.png.png" alt="CFA Logo" class="logo">
+    </div>
+
+
+
+    <section class="services">
+        <h2 class="section-title">Our Services:</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3>Community Workshops</h3>
+                <p>Environmental Awareness Campaigns, Community Training, and Policy Advocacy.</p>
+            </div>
+            <div class="service-card">
+                <h3>Tree Planting Events</h3>
+                <p>Reforestation, Agroforestry Promotion, and Rehabilitation of Degraded Areas.</p>
+            </div>
+            <div class="service-card">
+                <h3>Conservation Education</h3>
+                <p>Biodiversity Conservation, Water Resource Protection, and Sustainable Harvesting.</p>
+            </div>
+            <div class="service-card">
+                <h3>Volunteer Opportunities</h3>
+                <p>Forest Protection, Participatory Forest Management, and Stakeholder Collaboration.</p>
+            </div>
+            <div class="service-card">
+                <h3>Sustainability Programs</h3>
+                <p>Alternative Energy Sources, Sustainable Livelihoods, and Beekeeping Initiatives.</p>
+            </div>
+            <div class="service-card">
+                <h3>Community Outreach</h3>
+                <p>Eco-Tourism Development, Firewood Collection Management, and Gender Inclusion.</p>
+            </div>
+            <div class="service-card">
+                <h3>Tourist Attraction & Guide</h3>
+                <p>Experience guided tours of our natural landscapes, showcasing unique attractions and cultural heritage.</p>
+            </div>
+            <div class="service-card">
+                <h3>Wildlife Conservation</h3>
+                <p>Dedicated efforts to protect wildlife through innovative conservation programs and active community involvement.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Community Feedback:</h2>
+        <div class="feedback-slider">
+            <div class="feedback-card active">
+                <p>"The CFA has revolutionized community conservation. Our forest is thriving!"</p>
+                <h4>- Mr. Wiliam Keter</h4>
+            </div>
+            <div class="feedback-card">
+                <p>"I appreciate the commitment to sustainable development and community empowerment."</p>
+                <h4>- Mrs. Jane Mutai</h4>
+            </div>
+            <div class="feedback-card">
+                <p>"Their workshops and training sessions have made a huge difference in our lives."</p>
+                <h4>- Mr. Michael Bowen</h4>
+            </div>
+    </section>
+    <script>
+        // On page load, display only the first feedback card
+        window.addEventListener('DOMContentLoaded', function() {
+            var cards = document.querySelectorAll('.feedback-slider .feedback-card');
+            cards.forEach(function(card, index) {
+                card.style.display = index === 0 ? 'block' : 'none';
+            });
+        });
+
+        // Automatically toggle feedback cards every 10 seconds
+        var currentIndex = 0;
+        setInterval(function() {
+            var cards = document.querySelectorAll('.feedback-slider .feedback-card');
+            if (cards.length > 0) {
+                // Hide the current card
+                cards[currentIndex].style.display = 'none';
+                // Increment index and wrap around if necessary
+                currentIndex = (currentIndex + 1) % cards.length;
+                // Show the next card
+                cards[currentIndex].style.display = 'block';
+            }
+        }, 10000); // 10,000 milliseconds = 10 seconds
+    </script>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p><em>"Through protection, conservation, and sustainable utilization of Natural Resources for the betterment and empowerment of the community for present and future generations."</em></p>
+    </footer>
+</body>
+
+</html>
