@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandi North Escarpment CFA</title>
+    <link rel="icon" type="image/png" href="img/CFA logo.png.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="archive.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <img src="img/CFA logo.png.png" alt="CFA Logo" class="logo">
+        <div class="header-content">
+            <h1>Nandi North Escarpment</h1>
+            <h2>Community Forest Association</h2>
+            <!-- Navigation -->
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="archives.html">Archives</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+        <img src="img/CFA logo.png.png" alt="CFA Logo" class="logo">
+    </div>
+
+    <!-- Content Section -->
+    <div class="container">
+        <div class="image-container">
+            <img src="img/commuintyforest.png.png" alt="Community Forest">
+        </div>
+        <div class="text-content">
+            <p>
+                <p>The Kenya Forest Service (KFS) operates under the Forest Act No. 7 of 2005, revised under Act No. 34 of 2016, which mandates local communities adjacent to forests to form Community Forest Associations (CFAs) and develop forest management
+                    plans. This requirement enables effective community engagement in forest conservation and management..</p>
+                <p>In Nandi North, the first Community Forest Association (CFA) was established in 2009 to support sustainable forest conservation efforts. The association was formed by members of the forest-adjacent communities within Nandi County, part
+                    of the Mau Complex. These communities include Kiptuiya, Kombe, Kaptel, Sangalo, Kebulonik, Kurgung, Kamung’ei, Kipng’oror, and Chepterwai locations.</p>
+                <p>Working in collaboration with the Kenya Forest Service, the CFA plays a crucial role in ensuring responsible forest management and conservation while promoting sustainable utilization of forest resources.</p>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container" id="toggleContainer">
+            <img src="img/North Nandi Forest Location map.png" alt="North Nandi Forest Resources Map">
+            <img src="img/North nandi forest resource map.png" alt="North nandi forest resource map">
+        </div>
+        <script>
+            // On page load, ensure only the first image is visible
+            window.addEventListener('DOMContentLoaded', function() {
+                var container = document.getElementById('toggleContainer');
+                var imgs = container.getElementsByTagName('img');
+                if (imgs.length >= 2) {
+                    imgs[0].style.display = 'block';
+                    imgs[1].style.display = 'none';
+                }
+            });
+
+            // Function to toggle images
+            function toggleImages() {
+                var container = document.getElementById('toggleContainer');
+                var imgs = container.getElementsByTagName('img');
+                if (imgs[0].style.display === 'none') {
+                    imgs[0].style.display = 'block';
+                    imgs[1].style.display = 'none';
+                } else {
+                    imgs[0].style.display = 'none';
+                    imgs[1].style.display = 'block';
+                }
+            }
+
+            // Toggle images on click
+            document.getElementById('toggleContainer').addEventListener('click', function() {
+                toggleImages();
+            });
+
+            // Automatically toggle images every 10 seconds (10000 ms)
+            setInterval(function() {
+                toggleImages();
+            }, 10000);
+        </script>
+
+        <div class="text-content">
+            <p>The review of the North Nandi Participatory Forest Management Plan was conducted through a consultative process, coordinated by the County Forest Conservator’s office in Nandi, with financial support from the French Development Agency (AFD)
+                through the Green Belt Movement (GBM). The process began on September 28, 2021, at the Forest Manager’s compound in North Nandi, leading to the formation of a Local Plan Review Team, including community members from six beats, KWS representatives,
+                and the Forest Manager.</p>
+            <p>North Nandi Forest, covering 10,500.7 hectares in Nandi County, was declared a forest reserve in 1936 and later a central forest in 1964. It spans North Nandi and Chesumei sub-counties, bordering South Nandi, Kakamega, and Malava forests.
+                Managed by the Forest Station Manager with support from KFS staff, it lies at an altitude of 1,900–2,250 meters above sea level. The first Participatory Forest Management Plan (PFMP) was established after the 2005 Forests Act and launched
+                in 2016, covering five years until 2020.</p>
+            <p>The Forest falls within the range of at an altitude of between 1,900 and 2,250 m asl. In 2016 the forest had prepared a Participatory Forest Management Plan (PFMP) after the Forests Act 2005 was enacted and operationalized in 2007. The PFMP
+                last one was launched in 2016 by the Director KFS which covered a period of 5 years effectively elapsing in 2020.</p>
+            <p>North Nandi Forest, covering 10,500.7 hectares in Nandi County, was declared a forest reserve in 1936 and later a central forest in 1964. It spans North Nandi and Chesumei sub-counties, bordering South Nandi, Kakamega, and Malava forests.
+                Managed by the Forest Station Manager with support from KFS staff, it lies at an altitude of 1,900–2,250 meters above sea level. The first Participatory Forest Management Plan (PFMP) was established after the 2005 Forests Act and launched
+                in 2016, covering five years until 2020.</p>
+            <p>The review involved key stakeholders assessing previous plans through literature reviews, surveys, direct observations, and community consultations. A Local Plan Review Team (LPRT) provided essential input, and trained enumerators conducted
+                a socio-economic survey in November 2021. The collected data was organized into various management programs, including forest conservation, plantation development, water resource management, eco-tourism, security, community participation,
+                infrastructure, human resource development, and research.</p>
+            <p>The five-year plan includes estimated budgets for each activity, aiming to conserve and sustainably manage North Nandi Forest while improving the livelihoods of adjacent communities. It also emphasizes the role of women, youth, and people
+                with disabilities in conservation efforts.</p>
+        </div>
+    </div>
+</body>
+<!-- Footer Section -->
+<footer class="footer">
+    <p><em>"Through protection, conservation, and sustainable utilization of Natural Resources for the betterment and empowerment of the community for present and future generations."</em></p>
+</footer>
+
+</html>
