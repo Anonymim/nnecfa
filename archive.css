@@ -1,31 +1,8 @@
-/* General Styles */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #004d00;
-    text-align: center;
-}
-
-
-/* Header */
-
-header {
-    background-color: #004d00;
-    color: white;
-    padding: 5px;
-    /* Reduced padding */
-    padding-top: 15px;
-    /* Adjusted top padding */
-    font-size: 18px;
-    /* Reduce font size */
-}
-
-
 /* Section Styling */
 
 section {
+    font-family: Arial, sans-serif;
+    text-align: center;
     background: white;
     margin: 20px auto;
     padding: 20px;
@@ -97,26 +74,6 @@ section {
 
 .gallery-container img:hover {
     transform: scale(1.1);
-}
-
-
-/* General styles */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-}
-
-
-/* Header Styling */
-
-header {
-    background-color: #004d00;
-    color: white;
-    text-align: center;
-    padding: 10px;
 }
 
 
