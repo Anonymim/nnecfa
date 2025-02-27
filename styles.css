@@ -4,12 +4,15 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            color: #e6ffe6;
+            text-align: center;
+            width: auto;
             background-color: rgb(1, 69, 1);
             /* CFA green background */
         }
         /* Header Section */
         
-       .header {
+        .header {
             background-color: rgb(5, 148, 5);
             color: white;
             display: flex;
@@ -18,10 +21,9 @@
             padding: 15px;
             border-radius: 8px;
             /* Not fixed, so remove position: flex; */
-            width: 100%;
+            width: auto;
             z-index: 1000;
         }
-        
         
         .header-content {
             text-align: center;
@@ -39,7 +41,7 @@
         }
         
         .logo {
-            width: 30px;
+            width: 100px;
             height: auto;
             margin: 5px;
         }
@@ -107,108 +109,10 @@
             background-color: #ffffff;
             color: black;
             text-align: center;
-            padding: 20px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             border-radius: 8px;
+            width: auto;
         }
-        /* Feedback Section Styling */
-        
-        #customer-feedback {
-            padding: 50px 0;
-            text-align: center;
-            background-color: #f4f4f4;
-        }
-        
-        #customer-feedback h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #004d00;
-            /* CFA green theme */
-        }
-        
-        .feedback-slider {
-            position: relative;
-            max-width: 600px;
-            margin: 0 auto;
-            overflow: hidden;
-            height: 200px;
-            /* Adjust height as needed */
-        }
-        
-        .feedback-card {
-            display: none;
-            position: absolute;
-            color: black;
-            width: 100%;
-            transition: opacity 0.5s ease-in-out;
-            padding: 20px;
-            background-color: white;
-            border: 1px solid #ddd;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box;
-            border-radius: 8px;
-        }
-        
-        .feedback-card.active {
-            display: block;
-            opacity: 1;
-        }
-
-
-
-
-
-/* Responsive Design */
-
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-    .logo {
-        width: 50px;
-    }
-    .gallery-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-    .gallery-item {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery-container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-    .gallery-item .description {
-        font-size: 0.8rem;
-        padding: 5px;
-    }
-}
-.container {
-        width: 90%;
-        margin-top: 20px;
-        flex-direction: column;
-        padding: 10px;
-    }
-    .image-container,
-    .text-content {
-        flex: 1 1 100%;
-        padding-left: 0;
-        margin-bottom: 10px;
-    }
-    #customer-feedback {
-        padding: 20px 0;
-    }
-    #customer-feedback h2 {
-        font-size: 24px;
-    }
-    .feedback-slider {
-        max-width: 90%;
-        height: auto;
-        /* Let the height adjust naturally on small screens */
-    }
-    .feedback-card {
-        position: relative;
-        /* Avoid overlapping on mobile */
-    }
-}
