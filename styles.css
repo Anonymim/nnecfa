@@ -153,3 +153,34 @@
             opacity: 1;
         }
 
+
+
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo {
+        width: 50px;
+    }
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .gallery-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .gallery-item .description {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+}
