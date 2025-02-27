@@ -1,34 +1,48 @@
 document.addEventListener("DOMContentLoaded", function() {
+    emailjs.init("909L2zXEJs3U0ipQq"); // Ensure this is your actual Public Key
+
     const form = document.getElementById("contact-form");
+    const submitButton = document.getElementById("submit"); // Target the submit button
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
 
-        // Fetch and trim input values
-        let nameField = document.getElementById("name");
-        let emailField = document.getElementById("email");
-        let messageField = document.querySelector("textarea[name='message']");
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let message = document.getElementById("message").value.trim();
 
-        let name = nameField.value.trim();
-        let email = emailField.value.trim();
-        let message = messageField.value.trim();
+        if (name === "" || email === "" || message === "") {
+            alert("Please fill in all fields.");
+            return;
+        }
 
+        if (!validateEmail(email)) {
+            alert("Invalid email address.");
+            return;
+        }
 
+        // Disable the submit button to prevent duplicate submissions
+        submitButton.disabled = true;
+        submitButton.innerHTML = "Sending..."; // Update button text for UX
 
-        // Show success message and reset form
-        alert("Thank you, " + name + "! Your message has been sent successfully.");
-        form.reset();
-
-        // Reset values explicitly to prevent incorrect validation on next submit
-        nameField.value = "";
-        emailField.value = "";
-        messageField.value = "";
-
-        return; // Stop further execution
+        emailjs.sendForm("service_mqe4c5k", "template_gtb7n4q", form)
+            .then(
+                function(response) {
+                    alert("Message sent successfully!");
+                    form.reset();
+                    submitButton.disabled = false; // Re-enable button after success
+                    submitButton.innerHTML = "Send"; // Reset button text
+                },
+                function(error) {
+                    alert("Failed to send message. Check the console for details.");
+                    console.error("EmailJS Error:", error);
+                    submitButton.disabled = false; // Re-enable button after failure
+                    submitButton.innerHTML = "Send"; // Reset button text
+                }
+            );
     });
 
     function validateEmail(email) {
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailPattern.test(email);
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 });
