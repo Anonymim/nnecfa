@@ -14,7 +14,9 @@
     margin-top: 10px;
     text-align: center;
     border-radius: 10px;
-    color: black;
+    color: #e6ffe6;
+    font-size: 50px;
+}
 }
 
 .contact-wrapper {
