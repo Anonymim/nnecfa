@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-Pesa Payment for Document Download</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Download Documents</h2>
+        <div class="document-list">
+            <div class="document">
+                <p>Document 1 - "Social Welfare Systems.pdf"</p>
+                <button onclick="payWithMpesa('Social Welfare Systems.pdf', 100)">Pay Ksh 100</button>
+            </div>
+            <div class="document">
+                <p>Document 2 - "History of Social Care.docx"</p>
+                <button onclick="payWithMpesa('History of Social Care.docx', 150)">Pay Ksh 150</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function isValidPhoneNumber(phone) {
+            const phoneRegex = /^2547[0-9]{8}$/; // Validates Kenyan numbers starting with 2547
+            return phoneRegex.test(phone);
+        }
+
+        async function payWithMpesa(documentName, amount) {
+            let phone = prompt("Enter your M-Pesa number (e.g., 2547XXXXXXXX):");
+            
+            if (!isValidPhoneNumber(phone)) {
+                alert("Invalid phone number. Please enter a valid M-Pesa number.");
+                return;
+            }
+
+            try {
+                const response = await fetch("http://localhost:3000/stkpush", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ phone, amount, document: documentName })
+                });
+                const data = await response.json();
+                
+                if (data.success) {
+                    alert("STK Push sent! Confirm payment on your phone.");
+                    checkPaymentStatus(data.checkoutRequestID, documentName);
+                } else {
+                    alert("Payment initiation failed: " + data.error);
+                }
+            } catch (error) {
+                alert("Error: " + error.message);
+            }
+        }
+                
+        async function checkPaymentStatus(checkoutRequestID, documentName) {
+            setTimeout(async () => {
+                try {
+                    const response = await fetch(`http://localhost:3000/payment-status?checkoutRequestID=${checkoutRequestID}`);
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        alert("Payment successful! Your document is downloading...");
+                        let link = document.createElement("a");
+                        link.href = `download/${documentName}`;
+                        link.download = documentName;
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    } else {
+                        alert("Payment not received. Try again.");
+                    }
+                } catch (error) {
+                    alert("Error checking payment status: " + error.message);
+                }
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
