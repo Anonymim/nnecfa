@@ -12,7 +12,7 @@ const shortCode = "4699156";
 const passkey = "YG5/fvQcGbTlP/LzgpBWaTkdglPLuVJZ+jgEjcFPaoBLnL7koQsC6LOniZf7APzcoUGT9qkGwvR8KSvCAobmR2l7eUarvQKoQk6Lws95mA0G0R7c7IdmkPGoOlvNTGYz/H5wcl+QiFRpA7DEolYw1hbUUrfCUsWFKzDQ7lj/YuJDl3BFR2nAR5zsYquFe7jtRvmmQUdeu2AiLi8WstXqY1hJtihZz1+BtS3djeJZYaEBb6PZlwYqCq+vQTbDiZHLCyIlrUOWwi+zyREyHLRqyGakpi8VH1JLc6lNzZDMZBXKDoOxLtYzw7o1CW0vbPwucRhIk7kieezWzIy/ks2ZkQ==";
 const consumerKey = "3nzJZtPlAKIkGGFAtM4gWlmWbcjx0eMSDvFU9VPsROpAUkjo";
 const consumerSecret = "gvleGEAsAePYfgHglEXx0011AIKfkGH2es5KglNb2UkrhZLkNDkGnBxrDo7NRYDR";
-const callbackURL = "https://nandinorthescarpment.org/callback";
+const callbackURL = "https://nnecfaorg.vercel.app/callback";
 
 async function getAccessToken() {
     const response = await axios.get("https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials", {
