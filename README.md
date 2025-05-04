@@ -1,6 +1,8 @@
 # nnecfa
 Nandi North Escarpment Community Forest Asssociation
 # Nandi North Escarpments Community Forest Association (CFA) Website
+#Live website
+nandinorthescarpmentcfa.org
 
 ## Overview
 The **Nandi North Escarpments Community Forest Association (CFA)** is a community-led initiative dedicated to the conservation and sustainable management of forest resources within Nandi County. The CFA works in collaboration with the **Kenya Forest Service (KFS)**, local communities, and other stakeholders to promote environmental conservation, responsible resource use, and community participation in forest management.
